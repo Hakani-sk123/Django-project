@@ -1,0 +1,137 @@
+{% load static %}
+<html>
+<body bgcolor="#fafad2">
+<head>
+    <style >
+        .name{
+          font-size: 20px;
+        }
+        .price{
+          font-family: "Agency FB";
+            font-size: 18px;
+        }
+
+        .cart {
+            text-align: center;
+            font-family: "Bodoni MT";
+            background-color: black;
+            color: gold;
+        }
+        .Cart_Iteams {
+            text-align: right;
+            background-color: orangered;
+            color: white;
+            font-family: "Agency FB";
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: gold;
+
+
+        }
+
+
+
+
+    </style>
+</head>
+<table align="center"  width="100%">
+
+    <th style="background-color: darkslateblue;color: yellow;padding: 10px;font-size: 60px;font-family: 'Agency FB';text-shadow: red 6px 6px 6px" colspan="4">
+        Mobile-point</th>
+    <tr>
+        <th colspan="4"  class="Cart_Iteams"   >
+            <a  style="color: white" href="{% url 'show_cookies' %}">
+                Card Iteams:{{ total_cookies }}
+            </a>
+                </th>
+
+    </tr>
+
+    <tr>
+        <th><img src="{% static 'image/iphone.png' %}" width="150" height="160"></th>
+        <th><img src="{% static 'image/Samsung.png'%}" width="100" height="160"></th>
+        <th><img src="{% static 'image/Mi.png' %}"  width="180" height="160"></th>
+        <th><img src="{% static 'image/oneplus.png.'%}"  width="150" height="160"></th>
+    </tr>
+    <tr>
+        <th class="name">Iphone 11pro</th>
+        <th class="name">Samsung M31s</th>
+        <th class="name">Mi 9pro</th>
+        <th class="name">One-plus8</th>
+    </tr>
+    <tr>
+        <th class="price">Rs.110000/-</th>
+        <th class="price">Rs.21000/-</th>
+        <th class="price">Rs.16500/-</th>
+        <th class="price"> Rs.42000/-</th>
+    </tr>
+    <tr></tr><tr></tr>
+    <tr>
+        <th class="cart">
+            <a href="{% url 'cookie_data' %}?na=I-phone11pro&price=Rs.110000">
+            Add To Cart
+            </a>
+        </th>
+        <th class="cart">
+            <a href="{% url 'cookie_data' %}?na=Samsungm31s&price=Rs.21000">
+            Add To Cart
+            </a>
+        </th>
+        <th class="cart">
+            <a href="{% url 'cookie_data' %}?na=mi9pro&price=Rs.16500">
+            Add To Cart
+            </a>
+        </th>
+        <th class="cart">
+            <a href="{% url 'cookie_data' %}?na=One-Plus8&price=Rs.42000">
+            Add To Cart
+            </a>
+        </th>
+    </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+    <tr>
+        <th><img src="{% static 'image/vivo.png' %}" width="120" height="160"></th>
+        <th><img src="{% static 'image/Realme.png'%}" width="180" height="160"></th>
+        <th><img src="{% static 'image/motorolla.png' %}"  width="190" height="160"></th>
+        <th><img src="{% static 'image/oppo.png.'%}"  width="150" height="160"></th>
+    </tr>
+     <tr>
+        <th class="name">Vivo Y50</th>
+        <th class="name">Realme 7</th>
+        <th class="name">Motorolla G8</th>
+        <th class="name">Oppo f51</th>
+    </tr>
+    <tr>
+        <th class="price">Rs.11000/-</th>
+        <th class="price">Rs.13000/-</th>
+        <th class="price">Rs.14500/-</th>
+        <th class="price"> Rs.13200/-</th>
+    </tr>
+    <tr></tr><tr></tr>
+    <tr>
+        <th class="cart">
+            <a href="{% url 'cookie_data' %}?na=Vivoy50&price=Rs.11000">
+            Add To Cart
+            </a>
+        </th>
+        <th class="cart">
+            <a href="{% url 'cookie_data' %}?na=Realme7&price=Rs.13000">
+            Add To Cart
+            </a>
+        </th>
+        <th class="cart">
+            <a href="{% url 'cookie_data' %}?na=MotorollaG8&price=Rs14500">
+            Add To Cart
+            </a>
+        </th>
+        <th class="cart">
+            <a href="{% url 'cookie_data' %}?na=Oppof51&price=Rs.13200">
+            Add To Cart
+            </a>
+        </th>
+    </tr>
+</table>
+</body>
+</html>

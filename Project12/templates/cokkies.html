@@ -1,0 +1,47 @@
+
+<html>
+<head>
+
+
+ <style>
+     .cart_items{
+          text-align: right;
+            background-color: orangered;
+            color: white;
+            font-family: "Agency FB";
+            font-size: 20px;
+
+     }
+
+
+
+    </style>
+    <body>
+        <table align="center" border="0" width="1000">
+            <tr>
+                <th style="background-color: darkslateblue;color: yellow;padding: 10px;font-size: 60px;font-family: 'Agency FB';text-shadow: red 5px 5px 5px" colspan="4">
+        Sk-Communication
+                </th>
+            </tr>
+            <tr>
+                <th  style="color: white" class="cart_items" colspan="4">
+                    <a href="{% url 'show_cookies' %}">
+                        Cart Items : {{ total_cookies }}
+                    </a>
+                </th>
+            </tr>
+
+            {% for k,v in cookie.items %}
+                <tr>
+                    <th>{{ k }}</th>
+                    <th>{{ v }}</th>
+                    <th>
+                        <a href="{% url 'delete_cookie' %}?cn={{ k }}" style="color: red">
+                            Delete
+                        </a>
+                    </th>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
